@@ -1,8 +1,11 @@
 import React from 'react';
 
 function DirectionsList() {
-  const routesString = sessionStorage.getItem('directions');
-  const routes = JSON.parse(routesString);
+  // const routesString = sessionStorage.getItem('directions');
+  const routesString = localStorage.getItem('directions');
+
+
+  const routes = routesString ? JSON.parse(routesString) : [];
 
   return (
     <div>
@@ -26,3 +29,4 @@ function DirectionsList() {
 }
 
 export default DirectionsList;
+

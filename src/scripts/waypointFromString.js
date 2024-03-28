@@ -56,7 +56,9 @@ export function stringArraytoWaypoint(arr){
 // }
 
 export function replaceSpace(word){
-
+  if (!word) {
+    return '';
+  }
   var replaced = word.replace(' ', '+');
 
   return replaced;

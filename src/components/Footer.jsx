@@ -14,12 +14,12 @@ export default function Footer() {
     let waypoints = JSON.parse(sessionStorage.getItem("waypoints"));
 
 
-    const waypointsWithSpaces = waypoints.map((waypoint, index) => (
+    const waypointsWithSpaces = waypoints ? waypoints.map((waypoint, index) => (
         <span key={index}>
           {waypoint}
           {index !== waypoints.length - 1 && ', '}
         </span>
-      ));
+      )) : null
 
   return (
     <MDBFooter bgColor='light' className='text-start text-lg-left'>

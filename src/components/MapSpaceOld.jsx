@@ -82,7 +82,9 @@ function Directions( {start, stops }){
       directionsRenderer.setDirections(res);
       console.log('RESULTS:', res);
       const routes = res.routes
-      sessionStorage.setItem('directions', JSON.stringify(routes))
+      // sessionStorage.setItem('directions', JSON.stringify(routes))
+      localStorage.setItem('directions', JSON.stringify(routes))
+
     
     
       res.routes.forEach((route, routeIndex) => {
